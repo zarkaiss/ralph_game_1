@@ -1,0 +1,43 @@
+- [x] Initialize project directory structure and configure pytest environment
+- [x] Create game_logic.py with a skeleton MatchThreeEngine class containing an empty __init__ method
+- [x] Create test_game.py file to house all unit tests for the game engine
+- [x] Write a pytest function to verify grid initialization returns an 8x8 two-dimensional list
+- [x] Implement initialize_grid method in MatchThreeEngine to generate an 8x8 matrix
+- [x] Write a pytest function to verify all generated tiles contain integers between 1 and 5 inclusive
+- [x] Implement random tile assignment logic within the valid integer range
+- [x] Write a pytest function to assert that no horizontal or vertical matches of 3 or more exist upon initialization
+- [x] Implement validation loop during grid generation to prevent initial matches by regenerating conflicting tiles
+- [x] Write a pytest function to verify successful swapping of two horizontally adjacent tiles
+- [x] Write a pytest function to verify successful swapping of two vertically adjacent tiles
+- [x] Implement swap_tiles method to exchange values at specified coordinates
+- [x] Write a pytest function to assert that a swap automatically reverts when it does not produce a match of 3 or more
+- [x] Implement post-swap validation logic that checks for matches and restores original state if invalid
+- [x] Write a pytest function to verify boundary checks prevent swapping tiles outside the grid limits
+- [x] Write a pytest function to verify boundary checks prevent swapping non-adjacent tiles
+- [x] Write a pytest function to detect horizontal matches of exactly 3 identical tiles
+- [x] Implement detect_matches method to scan rows and return coordinates of matched tiles
+- [x] Write a pytest function to detect vertical matches of exactly 3 identical tiles
+- [x] Extend detect_matches to scan columns and aggregate match coordinates
+- [x] Write a pytest function to verify detection of matches with lengths of 4 and 5
+- [x] Refactor match detection algorithm to correctly handle overlapping and intersecting match patterns
+- [x] Write a pytest function to verify that matched tiles are cleared from the grid by setting them to zero
+- [x] Implement clear_matches method to remove identified tiles using provided coordinates
+- [x] Write a pytest function to verify gravity mechanics shift remaining tiles downward into empty spaces
+- [x] Implement column collapse logic that compacts non-empty tiles to the bottom of each column
+- [x] Write a pytest function to verify new random tiles populate the top rows after collapse
+- [x] Implement refill logic to generate new tiles at the top of columns without creating immediate matches
+- [x] Write a pytest function to verify recursive processing when tile refilling triggers cascading chain reactions
+- [x] Implement process_board loop that repeatedly clears, collapses, refills, and checks for new matches until stable
+- [x] Write a pytest function to calculate base score based on the total number of cleared tiles per turn
+- [x] Implement scoring accumulator within the engine to track player points
+- [x] Write a pytest function to verify bonus point allocation for 4-tile matches
+- [x] Write a pytest function to verify bonus point allocation for cascade chain reactions
+- [x] Integrate match length and cascade depth calculations into the scoring system
+- [x] Create main.py with a basic game loop structure importing MatchThreeEngine
+- [x] Implement a rendering function to display the current grid state as formatted text or Pygame surface
+- [x] Implement input handling to capture user coordinates for tile selection and swapping
+- [x] Connect user input to engine methods to execute swaps and trigger board processing
+- [x] Display real-time score updates in the interface after each successful move
+- [x] Add game state management to handle turn completion, invalid moves, and exit conditions
+- [x] Execute full pytest suite to ensure all unit tests pass before final integration
+- [x] Perform manual playtesting via main.py to verify end-to-end gameplay flow and UI responsiveness
